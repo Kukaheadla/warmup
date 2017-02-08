@@ -16,9 +16,13 @@ var thatArray = ["Facebook Platform","Erlang Enthusiasts","Ex-Girlfriends",
 "Camp Counselors","Nature Blogs","World of Warcraft","Models","Family Guy Enthusiasts","The Army","Cheap Vodka","Tech Incubators","Star Trek Conventions","Presentation Tools","Small Businesses","Beer","Nightclub Lines","Semi-Active Volcanoes", "Sanctimonial Artifacts","Traveling Abroad","Your Mom","Billionaires","Happy Hours","Ugg Boots","The Homeless","Blacking Out","Red Wine","Happy Families","Social Outcasts",
 "Surgeons","Pounding Jagger Bombs","Textbooks","Coffee Shops","Baristas"];
 
-var randomElement1 = thisArray[Math.floor(Math.random() * thisArray.length)];
-var randomElement2 = thatArray[Math.floor(Math.random() * thatArray.length)];
-var randomElement3 = thisArray[Math.floor(Math.random() * thisArray.length)];
-var randomElement4 = thatArray[Math.floor(Math.random() * thatArray.length)];
-
-alert('You should start something like '+ randomElement1+", " + randomElement2+', ' + randomElement3+ ', or ' + randomElement4 + '!');
+var button = document.getElementById('reset_button');
+button.addEventListener('click', function() {
+  var randomElement1 = thisArray[Math.floor(Math.random() * thisArray.length)];
+  var randomElement2 = thatArray[Math.floor(Math.random() * thatArray.length)];
+  var randomElement3 = thisArray[Math.floor(Math.random() * thisArray.length)];
+  var randomElement4 = thatArray[Math.floor(Math.random() * thatArray.length)];
+  var content = 'You should start something like '+ randomElement1+", " + randomElement2+', ' + randomElement3+ ', or ' + randomElement4 + '!';
+  document.getElementById('insert-idea').innerHTML = content;
+});
+// alert(content);
